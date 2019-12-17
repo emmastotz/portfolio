@@ -1,0 +1,9 @@
+img.portfolio-picture {
+  width: 25%;
+  height: auto;
+  float: left;
+}
+
+p.left-align {
+  text-align: left;
+}
