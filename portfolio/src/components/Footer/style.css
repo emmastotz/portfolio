@@ -3,7 +3,7 @@ img.footer-icon {
   height: auto;
 }
 
-.navbar-nav {
+.navbar-nav .foot {
   flex-direction: row;
   text-align: center;
 }

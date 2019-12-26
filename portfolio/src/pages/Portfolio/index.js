@@ -11,6 +11,7 @@ class Portfolio extends Component {
 
   handleClick = id => {
     this.setState({ id });
+    // link to the project
   };
 
   render() {
@@ -19,7 +20,7 @@ class Portfolio extends Component {
         <div className="row">
           {this.state.projects.map(project => (
             <div className="col-sm-4">
-              <h3>{project.title}</h3>
+              <h4>{project.title}</h4>
               <h6>{project.description}</h6>
               <Card
                 key = {project.id}
@@ -27,7 +28,9 @@ class Portfolio extends Component {
                 image = {project.image}
               />
               <button className="btn btn-secondary">
-                <a href={project.link}>View Project</a>
+                <a href={project.link}>
+                  View Project
+                </a>
               </button>
             </div>
           ))}
