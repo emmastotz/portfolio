@@ -11,6 +11,7 @@ function About() {
         <div className="row">
           <div className="col-md-12">
             <h4>about me</h4>
+            <hr></hr>
             <img src={Picture} alt="portfolio" className="portfolio-picture"/>
             <p className="left-align">
               Proficient with HTML5, CSS3, JavaScript, jQuery, Java, Bootstrap, Express.js, React.js, Node.js, MongoDB, and MySQL.
@@ -24,6 +25,7 @@ function About() {
             <p className="left-align">
               Seeking to continue my professional development and utilize my knowledge in marketing and design to affect positive change on a global scale.
             </p>
+            <hr></hr>
           </div>
         </div>
       </div>

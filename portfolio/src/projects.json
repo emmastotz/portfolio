@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image": "https://imgur.com/So9HMIE.png",
+    "title": "Replace the Space",
+    "description": "Cosmic-themed hangman.",
+    "link": "https://emmastotz.github.io/replace-the-space/"
+  },
+  {
+    "id": 2,
+    "image": "https://imgur.com/V8SW2Zb.png",
+    "title": "Block",
+    "description": "Take the stress out of scheduling your classes this semester.",
+    "link": "https://murmuring-river-25650.herokuapp.com/"
+  },
+  {
+    "id": 3,
+    "image": "https://imgur.com/chrto8U.png",
+    "title": "MeRead",
+    "description": "Hyperspace readme generator.",
+    "link": "https://github.com/emmastotz/rebelscum"
+  },
+  {
+    "id": 4,
+    "image": "https://imgur.com/HHZn5Vw.png",
+    "title": "Chum Bucket",
+    "description": "Find the right chum so you don't get catfished ever again.",
+    "link": "https://immense-wave-93212.herokuapp.com/home"
+  },
+  {
+    "id": 5,
+    "image": "https://imgur.com/FJ0rOnI.png",
+    "title": "CHZBGR the Sequel",
+    "description": "A sequelized version of CHZBGR. CRUD any cheeseburger your heart desires.",
+    "link": "https://github.com/emmastotz/chzbgr-the-sequel"
+  },
+  {
+    "id": 6,
+    "image": "https://imgur.com/wE7RFI0.png",
+    "title": "Scrappy",
+    "description": "Scrape the New York Times. Users can leave comments on the latest news.",
+    "link": "https://github.com/emmastotz/scrappy"
+  }
+]
