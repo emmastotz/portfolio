@@ -1,56 +1,68 @@
 import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
-import range from 'lodash/range';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import projects from "../../projects.json";
+
+const slider = (
+  <AwesomeSlider>
+    <div data-src="/path/to/image-0.png" />
+    <div data-src="/path/to/image-1.png" />
+    <div data-src="/path/to/image-2.jpg" />
+  </AwesomeSlider>
+);
 
 export default class Test extends React.Component {
-
-  componentDidMount() {
+  
+  componentWillMount() {
     this.setState({
       children: [],
       activeItemIndex: 0,
     });
-
+    
     setTimeout(() => {
       this.setState({
-        children: createChildren(20),
+        children: this.createChildren(),
       })
     }, 100);
   }
-
-  createChildren = n => range(n).map(i => <div key={i} style={{ height: 200, background: '#333' }}>{i}</div>);
-
-  changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
-
+  
+  createChildren = () => projects.map(project => 
+    <div key={project.id} style={{ height: 600}}>
+      <div> {project.title} </div>
+      <img height="200" src={project.image} alt={project.title} />
+      <div> {project.description} </div>
+    </div>);
+  
+  changeActiveItem = (activeItemIndex) => this.setState({ 
+  activeItemIndex });
+  
   render() {
     const {
       activeItemIndex,
       children,
     } = this.state;
-
     return (
       <ItemsCarousel
         // Placeholder configurations
         enablePlaceholder
-        numberOfPlaceholderItems={5}
+        numberOfPlaceholderItems={3}
         minimumPlaceholderTime={1000}
-        placeholderItem={<div style={{ height: 200, background: '#900' }}>Placeholder</div>}
-
+        placeholderItem={<div style={{ height: 200, background: '#fff' }}>Placeholder</div>}
         // Carousel configurations
         numberOfCards={3}
         gutter={12}
-        showSlither={true}
+        showSlither={false}
         firstAndLastGutter={true}
         freeScrolling={false}
-
         // Active item configurations
         requestToChangeActive={this.changeActiveItem}
         activeItemIndex={activeItemIndex}
         activePosition={'center'}
-
-        chevronWidth={24}
+        chevronWidth={48}
         rightChevron={'>'}
-        leftChevron={'<'}
-        outsideChevron={true}
+        leftChevron={slider}
+        outsideChevron={false}
       >
         {children}
       </ItemsCarousel>
